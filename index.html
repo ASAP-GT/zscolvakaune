@@ -1,7 +1,24 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
   
-  
+  <script src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    <!--
+
+    var url = $(location).attr('href'),
+
+        fparts = url.split("?"),
+        first_part = fparts[fparts.length - 1];
+    if (screen.width <= 767) {
+        if (url == first_part)
+            document.location = "mobile.html";
+        else
+            document.location = "mobile.html?" + first_part;
+    }
+    //-->
+
+</script>
+
   
   <head>
   
@@ -201,9 +218,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="form-title">لطلب المنتج سجل بياناتك وسوف يقوم احد ممثلى خدمة العملاء بالتواصل معكم</div>
                         <iframe id="hiddenFrame" name="hiddenFrame" class="hide"></iframe>
                         <form id="myForm" target="hiddenFrame" onsubmit="return postToGoogle()">
-                            <input type="text" placeholder="الاسم" class="form-control" id="name" name="entry.1042405085" required>
-                            <input type="text" placeholder="رقم التليفون" class="form-control" id="phone" name="entry.1872784423">
-                            <input type="submit" id="formBtn" value="اطلب الأن" class="button">
+                            <input type="text" placeholder="الاسم" class="form-control" id="name" name="entry.428211434" required>
+                            <input type="text" placeholder="رقم التليفون" class="form-control" id="phone" name="entry.1722505422">
+                           
+
+
+                          <input type="hidden" name="entry.2056466192" id="article">
+                          <input type="hidden" name="entry.1653687215" value="Computer">
+                          <input type="hidden" name="entry.2145903139" value="v02">
+                            
+                            
+
+                            <div class="clearfix"></div>
+
+
+
+
+
+
+
+
+
+						   <input type="submit" id="formBtn" value="اطلب الأن" class="button">
                             <span class="btn-span">خصم خاص لفترة محدودة</span>
                         </form>
                     </div>
@@ -222,11 +258,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         function postToGoogle(){
             var filed1 = $("#name").val();
             var filed2 = $("#phone").val();
+            var filed3 = $("#article").val();
+
+
+
 
             submitted=true;
             $.ajax({
-                url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScz_Phtjz0RJjW9ldkPq6Y-ue63Q8VjDuKgtKPS6rMFKmDNyQ/formResponse",
-                data: {"entry.1042405085": filed1, "entry.1872784423" : filed2},
+                url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdO2WOXCAr6Lmr7VKmcTmgwKBwa_4bxX4WtY8uF-IzqRln9Lw/formResponse",
+                data: {"entry.428211434": filed1, "entry.1722505422" : filed2, "entry.2056466192" : filed3 },
                 type:"post",
                 dataType: "xml",
                 success: setTimeout(() => {
@@ -240,25 +280,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             return false;
         }
     </script>
+	
+	
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end footer-->
+    <!--End block4-->
+
+
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/popper.main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugin.js"></script>
+</body>
+	
+	
+	
+	
+	
+	
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
